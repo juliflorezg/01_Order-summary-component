@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --font: 'Red Hat Display', sans-serif;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--pale-blue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main{
+  background-color: white;
+  position: absolute;
+  display:block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 80%;
+  width: 90%;
+  font-family: var(--font);
+  border-radius: 25px;
+
+
+  /* display: none; */
+}
+
+.hero{
+  display: block;
+  width: 100%;
+  height: 25vh;
+  background-image: url(../images/illustration-hero.svg);
+  background-size: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+.content h1,
+.content p{
+  text-align: center;
+}
+
+.content h1{
+  margin: 1.3em auto .8em auto ;
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--dark-blue)
+}
+
+.content p{
+  font-size: 16px;
+  margin: auto 1.75rem;
+  line-height: 2;
+  color: var(--desaturated-blue)
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  margin: 1.3rem;
+  padding: 1rem;
+  background-color: var(--very-pale-blue);
+  border-radius: 15px;
+  gap: 15px;
+}
+
+.plan-name{
+  flex-shrink: 2;
+  /* background-color: violet; */
+}
+
+.plan-name span,
+.plan-name p{
+  margin: 0;
+  display: block;
+}
+
+.plan-name span{
+  font-weight: 900;
+  color: var(--dark-blue)
+}
+
+.plan a{
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.buttons{
+  padding: 0 1.3rem;
+}
+
+.payment{
+  display: block;
+  margin: 0 auto;
+  background-color: var(--bright-blue);
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 1rem 0;
+  color: white;
+  font-weight: 700;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 15px 25px var(--pale-blue)
+}
+
+.buttons a{
+  display: block;
+  margin:  1.4rem 0;
+  text-align: center;
+  text-decoration: none;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+
+}
+
+
+
+
+@media screen and (min-width: 500px) {
+
+  body{
+    background-color: var(--pale-blue);
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  main{
+    background-color: white;
+    position: absolute;
+    display:block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    min-height: 80%;
+    max-width: 30%;
+    font-family: var(--font);
+    border-radius: 25px; 
+    /* display: none; */
+  }
+
+  .content p{
+    margin: auto 2.25rem;
+  }
+
+  .plan {
+    margin: 2.25rem;
+    padding: 1rem;
+  }
+
+  .plan-name p {
+    margin: 0;
+  }
+  
+  .buttons{
+    padding: 0 2.25rem;
+  }
+
+  /* hover states */
+
+  .plan a {
+    opacity: 1;
+    transition: all .3s ease;
+  }
+
+  .plan a:hover {
+    opacity: .75;
+  }
+
+  .buttons button {
+    opacity: 1;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+
+  .buttons button:hover {
+    opacity: .75;
+  }
+
+  .buttons a {
+    color: var(--desaturated-blue);
+    transition: color .3s ease;
+  }
+
+  .buttons a:hover {
+    color: var(--dark-blue);
+  }
+}
