@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [github](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/solution-for-the-challenge-i-mainly-used-flexbox-on-this-one-dZvZRmYuf)
+- Live Site URL: [github](https://juliflorezg.github.io/01_Order-summary-component/)
 
 ## My process
 
